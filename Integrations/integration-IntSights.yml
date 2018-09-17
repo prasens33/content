@@ -866,3 +866,4 @@ script:
     description: Close the alert
   isfetch: true
 hidden: false
+releaseNotes: Added intsights-close alert command
