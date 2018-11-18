@@ -595,7 +595,7 @@ script:
             alert_severity = alert['severity']
             if alert_creation_time > last_alert_fetched_time and alert_status in FETCH_STATUS and alert_severity in FETCH_SEVERITY:
                 alert_id = alert['id']
-                alert['RelatedFiles'] = get_alert_related_files(alert_id)
+                #alert['RelatedFiles'] = get_alert_related_files(alert_id)
                 #alert['RelatedDomains'] = get_alert_related_domains(alert_id)
                 #alert['RelatedIPs'] = get_alert_related_ips(alert_id)
                 incident = alert_to_incident(alert)
@@ -623,7 +623,7 @@ script:
         if demisto.command() == 'test-module':
             test_function()
 
-        elif demisto.command() == 'fetch-incidents': # 404
+        elif demisto.command() == 'fetch-incidents':
             fetch_incidents()
 
         elif demisto.command() == 'microsoft-atp-isolate-machine':
@@ -641,16 +641,16 @@ script:
         elif demisto.command() == 'microsoft-atp-get-machine-details':
             get_machine_details_command()
 
-        elif demisto.command() == 'microsoft-atp-block-file': # 404 - new file
+        elif demisto.command() == 'microsoft-atp-block-file':
             block_file_command()
 
-        elif demisto.command() == 'microsoft-atp-get-user-related-machines': # 404 - checking
+        elif demisto.command() == 'microsoft-atp-get-user-related-machines':
             get_user_related_machines_command()
 
-        elif demisto.command() == 'microsoft-atp-stop-and-quarantine-file': # 500 - does not exist yet - 2 weeks
+        elif demisto.command() == 'microsoft-atp-stop-and-quarantine-file':
             stop_and_quarantine_file_command()
 
-        elif demisto.command() == 'microsoft-atp-run-antivirus-scan': # 400
+        elif demisto.command() == 'microsoft-atp-run-antivirus-scan':
             run_antivirus_scan_command()
 
         elif demisto.command() == 'microsoft-atp-list-alerts':
@@ -1018,3 +1018,4 @@ script:
   runonce: false
 tests:
 - Forgive me for my sins but I did not create any test
+releaseNotes: "-"
