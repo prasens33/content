@@ -1015,6 +1015,33 @@ script:
             demisto.results( { "Type" : entryTypes["error"], "ContentsFormat" : formats["text"], "Contents" : 'Unable to get export. Error: {}'.format(ex)})
             sys.exit(2)
 
+    def getStorageCredentials():
+        privateKeyJson = json.loads(PRIVATE_KEY_CONTENT)
+        crads = google_service_account.Credentials.from_service_account_info(privateKeyJson, scopes=SCOPES, subject=ADMIN_EMAIL)
+        return crads
+
+    def connectToStorage():
+        service = build('storage', 'v1', credentials=getStorageCredentials())
+        return service
+
+
+    def download_export_command():
+        bucket_name = demisto.getArg('bucketName');
+        object_name = demisto.getArg('objectName');
+        try:
+            service = connectToStorage()
+            req = service.objects().get_media(bucket=bucket_name, object=object_name)
+            out_file = io.BytesIO()
+            downloader = googleapiclient.http.MediaIoBaseDownload(out_file, req)
+            done = False
+            while not done:
+                done = downloader.next_chunk()[1]
+
+            demisto.results(fileResult(object_name, out_file.getvalue()))
+        except Exception, ex:
+            demisto.results( { "Type" : entryTypes["error"], "ContentsFormat" : formats["text"], "Contents" : 'Unable to download export. Error: {}'.format(ex)})
+            sys.exit(2)
+
 
     # @@@@@@@@ DEMISTO COMMANDS @@@@@@@@
 
