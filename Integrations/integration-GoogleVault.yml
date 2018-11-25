@@ -972,21 +972,41 @@ script:
         export_id = demisto.getArg('exportID')
         try:
             response = get_export_by_id(service, matter_id, export_id)
-            usr_msg = "Here are your export details:\nMatter ID: {}\nExport ID: {}\nExport Name: {}\nExporting Status: {}.".format(matter_id, export_id, response.get('name'), response.get('status'))
             export_name = response.get('name')
             export_status = response.get('status')
+            create_time = response.get('createTime')
+            bucket_name = response.get('cloudStorageSink').get('files')[0].get('bucketName') if export_status == 'COMPLETED' else ''
+            object_name = response.get('cloudStorageSink').get('files')[0].get('objectName') if export_status == 'COMPLETED' else ''
             context_output = []
             context_output.append({
                 'MatterID': matter_id,
-                'ID': export_id,
+                'ExportID': export_id,
                 'Name': export_name,
-                'Status': export_status
+                'Status': export_status,
+                'BucketName': bucket_name,
+                'ObjectName': object_name
             })
+            title = "You Export details:\n"
+            output_for_markdown = {  # This one is for tableToMarkdown to correctly map
+            'Matter ID': matter_id,
+            'Export ID': export_id,
+            'Export Name': export_name,
+            'Status': export_status,
+            'Created Time': create_time,
+            'Bucket Name(for download)': bucket_name,
+            'Object Name(for download)': object_name
+            }
+            if(export_status == 'COMPLETED'):
+                headers = ['Matter ID', 'Export ID', 'Export Name', 'Status', 'Created Time', 'Bucket Name(for download)', 'Object Name(for download)']
+            else:
+                headers = ['Matter ID', 'Export ID', 'Export Name', 'Status', 'Created Time']
+            markdown = tableToMarkdown(title, output_for_markdown, headers)
+
             demisto.results( {
             'Type': entryTypes['note'],
             'ContentsFormat': formats['json'],
             'Contents': context_output,
-            'HumanReadable': usr_msg,
+            'HumanReadable': markdown,
             'EntryContext': {
                 'GoogleVault.Export(val.ID == obj.ID)': context_output
                              }
@@ -1429,5 +1449,6 @@ script:
     description: Gets a specified Export status
   dockerimage: demisto/gvault
   runonce: false
+releaseNotes: "Added markdown and storage details (bucket and object names)"
 tests:
   - Google-Vault-Generic-Test
