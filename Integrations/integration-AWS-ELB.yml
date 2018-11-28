@@ -1,0 +1,2136 @@
+commonfields:
+  id: AWS - ELB
+  version: -1
+name: AWS - ELB
+display: AWS - ELB
+category: Amazon Web Services
+image: data:image/png;base64,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
+description: Amazon Web Services Elastic Load Balancer Service (elb)
+configuration:
+- display: Default Region
+  name: defaultRegion
+  defaultvalue: ""
+  type: 0
+  required: true
+- display: Role Arn
+  name: roleArn
+  defaultvalue: ""
+  type: 0
+  required: false
+- display: Role Session Name
+  name: roleSessionName
+  defaultvalue: ""
+  type: 0
+  required: false
+- display: Role Session Duration
+  name: sessionDuration
+  defaultvalue: ""
+  type: 0
+  required: false
+script:
+  script: |-
+    import boto3
+    import datetime
+
+    AWS_DEFAULT_REGION = demisto.params()['defaultRegion']
+    AWS_roleArn = demisto.params()['roleArn']
+    AWS_roleSessionName = demisto.params()['roleSessionName']
+    AWS_roleSessionDuration = demisto.params()['sessionDuration']
+    AWS_rolePolicy = None
+
+    def aws_session(service='elbv2',region=None,roleArn=None,roleSessionName=None,roleSessionDuration=None,rolePolicy=None):
+        kwargs = {}
+        if roleArn and roleSessionName is not None:
+            kwargs.update({
+                'RoleArn':roleArn,
+                'RoleSessionName':roleSessionName,
+                })
+        elif AWS_roleArn and AWS_roleSessionName is not None:
+            kwargs.update({
+                'RoleArn':AWS_roleArn,
+                'RoleSessionName':AWS_roleSessionName,
+                })
+
+        if roleSessionDuration is not None:
+            kwargs.update({'DurationSeconds':int(roleSessionDuration)})
+        elif AWS_roleSessionDuration is not None:
+            kwargs.update({'DurationSeconds':int(AWS_roleSessionDuration)})
+
+        if rolePolicy is not None:
+            kwargs.update({'Policy':rolePolicy})
+        elif AWS_rolePolicy is not None:
+            kwargs.update({'Policy':AWS_rolePolicy})
+
+        if kwargs:
+            sts_client = boto3.client('sts')
+            sts_response = sts_client.assume_role(**kwargs)
+            if region is not None:
+                client = boto3.client(
+                    service_name=service,
+                    region_name=region,
+                    aws_access_key_id=sts_response['Credentials']['AccessKeyId'],
+                    aws_secret_access_key=sts_response['Credentials']['SecretAccessKey'],
+                    aws_session_token=sts_response['Credentials']['SessionToken']
+                    )
+            else:
+                client = boto3.client(
+                    service_name=service,
+                    region_name=AWS_DEFAULT_REGION,
+                    aws_access_key_id=sts_response['Credentials']['AccessKeyId'],
+                    aws_secret_access_key=sts_response['Credentials']['SecretAccessKey'],
+                    aws_session_token=sts_response['Credentials']['SessionToken']
+                    )
+        else:
+            if region is not None:
+                client = boto3.client(service_name=service,region_name=region)
+            else:
+                client = boto3.client(service_name=service,region_name=AWS_DEFAULT_REGION)
+
+        return client
+
+    def parse_tag_field(tags_str):
+        tags = []
+        regex = re.compile(r'key=([\w\d_:.-]+),value=([ /\w\d@_,.\*-]+)', flags=re.I)
+        for f in tags_str.split(';'):
+            match = regex.match(f)
+            if match is None:
+                demisto.log('could not parse field: %s' % (f, ))
+                continue
+
+            tags.append({
+                'Key' : match.group(1),
+                'Value' : match.group(2)
+                })
+
+        return tags
+
+    def parse_subnet_mappings(subnets_str):
+        subnets = []
+        regex = re.compile(r'subnetid=([\w\d_:.-]+),allocationid=([ /\w\d@_,.\*-]+)', flags=re.I)
+        for f in subnets_str.split(';'):
+            match = regex.match(f)
+            if match is None:
+                demisto.log('could not parse field: %s' % (f, ))
+                continue
+
+            subnets.append({
+                'SubnetId' : match.group(1),
+                'AllocationId' : match.group(2)
+                })
+
+        return subnets
+
+    class DatetimeEncoder(json.JSONEncoder):
+      def default(self, obj):
+        if isinstance (obj, datetime.datetime):
+            return obj.strftime ('%Y-%m-%dT%H:%M:%S')
+        elif isinstance (obj, datetime.date):
+            return obj.strftime ('%Y-%m-%d')
+        elif isinstance(obj, datetime):
+            return obj.strftime('%Y-%m-%dT%H:%M:%S')
+        elif isinstance(obj, date):
+            return obj.strftime('%Y-%m-%d')
+        # Let the base class default method raise the TypeError
+        return json.JSONEncoder.default(self, obj)
+
+    def parse_resource_ids(resource_id):
+        id_list = resource_id.replace(" ", "")
+        resourceIds = id_list.split(",")
+        return resourceIds
+
+    def create_entry(title,data, ec):
+        return {
+            'ContentsFormat': formats['json'],
+            'Type': entryTypes['note'],
+            'Contents': data,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown(title, data) if data else 'No result were found',
+            'EntryContext': ec
+        }
+
+    def raise_error(error):
+        return {
+            'Type' : entryTypes['error'],
+            'ContentsFormat' : formats['text'],
+            'Contents' : str(error)
+        }
+
+    def create_load_balancer(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {'Name':args.get('name')}
+
+            if args.get('subnets') is not None:
+                kwargs.update({'Subnets':parse_resource_ids(args.get('subnets'))})
+            if args.get('subnetMappings') is not None:
+                kwargs.update({'SubnetMappings':parse_subnet_mappings(args.get('subnetMappings'))})
+            if args.get('securityGroups') is not None:
+                kwargs.update({'SecurityGroups':parse_resource_ids(args.get('securityGroups'))})
+            if args.get('scheme') is not None:
+                kwargs.update({'Scheme':args.get('scheme')})
+            if args.get('tags') is not None:
+                kwargs.update({'Tags':parse_tag_field(args.get('tags'))})
+            if args.get('type') is not None:
+                kwargs.update({'Type':args.get('type')})
+            if args.get('ipAddressType') is not None:
+                kwargs.update({'IpAddressType':args.get('ipAddressType')})
+
+            response = client.create_load_balancer(**kwargs)
+            lb = response['LoadBalancers']
+            data = ({
+                'LoadBalancerArn': lb['LoadBalancerArn'],
+                'DNSName': lb['DNSName'],
+                'CanonicalHostedZoneId': lb['CanonicalHostedZoneId'],
+                'LoadBalancerName': lb['LoadBalancerName'],
+                'Scheme': lb['Scheme'],
+                'VpcId': lb['VpcId'],
+                'Type': lb['Type'],
+                'SecurityGroups': lb['SecurityGroups'],
+                'IpAddressType': lb['IpAddressType'],
+                'CreatedTime': datetime.datetime.strftime(lb['CreatedTime'], '%Y-%m-%dT%H:%M:%SZ'),
+                'Region': obj['_user_provided_options']['region_name'],
+                })
+
+            raw = json.loads(json.dumps(response['LoadBalancers'], cls=DatetimeEncoder))
+            raw.update({'Region': obj['_user_provided_options']['region_name']})
+            ec = {'AWS.ELB.LoadBalancers': raw}
+            return  create_entry('AWS ELB Load Balancers',data, ec)
+
+        except Exception as e:
+            return raise_error(e)
+
+    def describe_load_balancers(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {}
+            data = []
+
+            if args.get('loadBalancerArns') is not None:
+                kwargs.update({'LoadBalancerArns':parse_resource_ids(args.get('loadBalancerArns'))})
+            if args.get('names') is not None:
+                kwargs.update({'Names':parse_resource_ids(args.get('names'))})
+
+            response = client.describe_load_balancers(**kwargs)
+            for lb in response['LoadBalancers']:
+                data.append({
+                    'LoadBalancerArn': lb['LoadBalancerArn'],
+                    'DNSName': lb['DNSName'],
+                    'CanonicalHostedZoneId': lb['CanonicalHostedZoneId'],
+                    'LoadBalancerName': lb['LoadBalancerName'],
+                    'Scheme': lb['Scheme'],
+                    'VpcId': lb['VpcId'],
+                    'Type': lb['Type'],
+                    'SecurityGroups': lb['SecurityGroups'],
+                    'IpAddressType': lb['IpAddressType'],
+                    'CreatedTime': datetime.datetime.strftime(lb['CreatedTime'], '%Y-%m-%dT%H:%M:%SZ'),
+                    'Region': obj['_user_provided_options']['region_name'],
+                    })
+
+            raw = json.loads(json.dumps(response['LoadBalancers'], cls=DatetimeEncoder))
+            if raw:
+                raw.update({'Region': obj['_user_provided_options']['region_name']})
+            ec = {'AWS.ELB.LoadBalancers(val.LoadBalancerArn === obj.LoadBalancerArn)': raw}
+            return  create_entry('AWS ELB Load Balancers',data, ec)
+
+        except Exception as e:
+            return raise_error(e)
+
+    def describe_listeners(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {}
+            data = []
+
+            if args.get('loadBalancerArn') is not None:
+                kwargs.update({'LoadBalancerArn':args.get('loadBalancerArn')})
+            if args.get('listenerArns') is not None:
+                kwargs.update({'ListenerArns':parse_resource_ids(args.get('listenerArns'))})
+
+            response = client.describe_listeners(**kwargs)
+            for lb in response['Listeners']:
+                data.append({
+                    'LoadBalancerArn': lb['LoadBalancerArn'],
+                    'ListenerArn': lb['ListenerArn'],
+                    'Port': lb['Port'],
+                    'Protocol': lb['Protocol'],
+                    'SslPolicy': lb['SslPolicy'],
+                    'Region': obj['_user_provided_options']['region_name'],
+                    })
+
+            raw = json.loads(json.dumps(response['Listeners'], cls=DatetimeEncoder))
+            if raw:
+                raw.update({'Region': obj['_user_provided_options']['region_name']})
+            ec = {'AWS.ELB.Listeners(val.ListenerArn === obj.ListenerArn)': raw}
+            return  create_entry('AWS ELB Listeners',data, ec)
+
+        except Exception as e:
+            return raise_error(e)
+
+    def describe_target_groups(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {}
+            data = []
+
+            if args.get('loadBalancerArn') is not None:
+                kwargs.update({'LoadBalancerArn':args.get('loadBalancerArn')})
+            if args.get('targetGroupArns') is not None:
+                kwargs.update({'TargetGroupArns':parse_resource_ids(args.get('targetGroupArns'))})
+            if args.get('names') is not None:
+                kwargs.update({'Names':parse_resource_ids(args.get('names'))})
+
+            response = client.describe_target_groups(**kwargs)
+            for tg in response['TargetGroups']:
+                data.append({
+                    'TargetGroupArn': tg['TargetGroupArn'],
+                    'TargetGroupName': tg['TargetGroupName'],
+                    'Protocol': tg['Protocol'],
+                    'Port': tg['Port'],
+                    'VpcId': tg['VpcId'],
+                    'TargetType': tg['TargetType'],
+                    'LoadBalancerArns': tg['LoadBalancerArns'],
+                    'Region': obj['_user_provided_options']['region_name'],
+                    })
+
+            raw = json.loads(json.dumps(response['TargetGroups'], cls=DatetimeEncoder))
+            if raw:
+                raw.update({'Region': obj['_user_provided_options']['region_name']})
+            ec = {'AWS.ELB.TargetGroups(val.TargetGroupArn === obj.TargetGroupArn)': raw}
+            return  create_entry('AWS ELB Target Groups',data, ec)
+
+        except Exception as e:
+            return raise_error(e)
+
+    def describe_listener_certificates(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {'ListenerArn':args.get('listenerArn')}
+            data = []
+
+            response = client.describe_listener_certificates(**kwargs)
+            for tg in response['Certificates']:
+                data.append({
+                    'ListenerArn': tg['ListenerArn'],
+                    'CertificateArn': tg['CertificateArn'],
+                    'IsDefault': tg['IsDefault'],
+                    })
+
+            ec = {'AWS.ELB.Listener.(val.ListenerArn === obj.ListenerArn).Certificates': data}
+            return  create_entry('AWS ELB Target Groups',data, ec)
+
+        except Exception as e:
+            return raise_error(e)
+
+    def describe_target_health(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {'TargetGroupArn':args.get('targetGroupArn')}
+            data = []
+
+            response = client.describe_target_health(**kwargs)
+            for tg in response['TargetHealthDescriptions']:
+                data.append({
+                    'TargetGroupArn': args.get('targetGroupArn'),
+                    'Id': tg['Target']['Id'],
+                    'Port': tg['Target']['Port'],
+                    'AvailabilityZone': tg['Target']['ProAvailabilityZonetocol'],
+                    'HealthCheckPort': tg['HealthCheckPort'],
+                    'State': tg['TargetHealth']['State'],
+                    'Reason': tg['TargetHealth']['Reason'],
+                    'Description': tg['TargetHealth']['Description'],
+                    })
+
+            ec = {'AWS.ELB.TargetGroups(val.TargetGroupArn === obj.TargetGroupArn).TargetHealthDescriptions': raw}
+            return  create_entry('AWS ELB Target Groups Target Health Descriptions',data, ec)
+
+        except Exception as e:
+            return raise_error(e)
+
+    def create_forward_listener(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {
+                'LoadBalancerArn':args.get('loadBalancerArn'),
+                'Protocol':args.get('protocol'),
+                'Port':args.get('port'),
+            }
+            DefaultActions = {'Type': 'forward'}
+
+            if args.get('sslPolicy') is not None:
+                kwargs.update({'SslPolicy':args.get('sslPolicy')})
+            if args.get('certificateArn') is not None:
+                Certificates={'CertificateArn':args.get('certificateArn')}
+                kwargs.update({'Certificates': [Certificates]})
+            if args.get('targetGroupArn') is not None:
+                DefaultActions.update({'TargetGroupArn':args.get('targetGroupArn')})
+
+            kwargs.update({'DefaultActions': [DefaultActions]})
+
+            response = client.create_listener(**kwargs)
+            lb = response['Listeners']
+            data = ({
+                'ListenerArn': lb['ListenerArn'],
+                'LoadBalancerArn': lb['LoadBalancerArn'],
+                'Port': lb['Port'],
+                'Protocol': lb['Protocol'],
+                'Type': lb['DefaultActions']['Type'],
+                'Region': obj['_user_provided_options']['region_name'],
+                })
+
+            raw = json.loads(json.dumps(response['Listeners'], cls=DatetimeEncoder))
+            raw.update({'Region': obj['_user_provided_options']['region_name']})
+            ec = {'AWS.ELB.Listeners': raw}
+            return  create_entry('AWS ELB Listeners',data, ec)
+
+        except Exception as e:
+            return raise_error(e)
+
+    def create_target_group(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {
+                'Name':args.get('name'),
+                'Protocol':args.get('protocol'),
+                'Port':int(args.get('port')),
+                'VpcId':args.get('vpcId'),
+            }
+
+            if args.get('healthCheckProtocol') is not None:
+                kwargs.update({'HealthCheckProtocol':args.get('healthCheckProtocol')})
+            if args.get('healthCheckPort') is not None:
+                kwargs.update({'HealthCheckPort':args.get('healthCheckPort')})
+            if args.get('healthCheckPath') is not None:
+                kwargs.update({'HealthCheckPath':args.get('healthCheckPath')})
+            if args.get('healthCheckIntervalSeconds') is not None:
+                kwargs.update({'HealthCheckIntervalSeconds':int(args.get('healthCheckIntervalSeconds'))})
+            if args.get('healthCheckTimeoutSeconds') is not None:
+                kwargs.update({'HealthCheckTimeoutSeconds':int(args.get('healthCheckTimeoutSeconds'))})
+            if args.get('healthyThresholdCount') is not None:
+                kwargs.update({'HealthyThresholdCount':int(args.get('healthyThresholdCount'))})
+            if args.get('unhealthyThresholdCount') is not None:
+                kwargs.update({'UnhealthyThresholdCount':int(args.get('unhealthyThresholdCount'))})
+            if args.get('httpCode') is not None:
+                Matcher={'HttpCode':args.get('httpCode')}
+                kwargs.update({'Matcher': Matcher})
+            if args.get('targetType') is not None:
+                kwargs.update({'TargetType':args.get('targetType')})
+
+            response = client.create_target_group(**kwargs)
+            tg = response['TargetGroups']
+            data = ({
+                'TargetGroupArn': tg['TargetGroupArn'],
+                'TargetGroupName': tg['TargetGroupName'],
+                'Protocol': tg['Protocol'],
+                'Port': tg['Port'],
+                'VpcId': tg['VpcId'],
+                'Region': obj['_user_provided_options']['region_name'],
+                })
+
+            raw = json.loads(json.dumps(response['Listeners'], cls=DatetimeEncoder))
+            raw.update({'Region': obj['_user_provided_options']['region_name']})
+            ec = {'AWS.ELB.TargetGroups': raw}
+            return  create_entry('AWS ELB Target Groups',data, ec)
+
+        except Exception as e:
+            return raise_error(e)
+
+    def register_targets(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {'TargetGroupArn':args.get('targetGroupArn')}
+
+            Targets = {'Id': args.get('Id')}
+
+            if args.get('port') is not None:
+                Targets.update({'Port':int(args.get('port'))})
+            if args.get('availabilityZone') is not None:
+                Targets.update({'AvailabilityZone':args.get('availabilityZone')})
+
+            kwargs.update({'Targets': Targets})
+
+            response = client.register_targets(**kwargs)
+            tg = response['TargetGroups']
+            data = ({
+                'TargetGroupArn': tg['TargetGroupArn'],
+                'TargetGroupName': tg['TargetGroupName'],
+                'Protocol': tg['Protocol'],
+                'Port': tg['Port'],
+                'VpcId': tg['VpcId'],
+                'Region': obj['_user_provided_options']['region_name'],
+                })
+
+            if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+                return "The Target was added to Traget Group"
+
+        except Exception as e:
+            return raise_error(e)
+
+    def deregister_targets(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {'TargetGroupArn':args.get('targetGroupArn')}
+
+            Targets = {'Id': args.get('Id')}
+
+            if args.get('port') is not None:
+                Targets.update({'Port':int(args.get('port'))})
+            if args.get('availabilityZone') is not None:
+                Targets.update({'AvailabilityZone':args.get('availabilityZone')})
+
+            kwargs.update({'Targets': Targets})
+
+            response = client.deregister_targets(**kwargs)
+            tg = response['TargetGroups']
+            data = ({
+                'TargetGroupArn': tg['TargetGroupArn'],
+                'TargetGroupName': tg['TargetGroupName'],
+                'Protocol': tg['Protocol'],
+                'Port': tg['Port'],
+                'VpcId': tg['VpcId'],
+                'Region': obj['_user_provided_options']['region_name'],
+                })
+
+            if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+                return "The Target was removed from Traget Group"
+
+        except Exception as e:
+            return raise_error(e)
+
+    def add_listener_certificates(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {'ListenerArn':args.get('listenerArn')}
+            Certificates = {
+                'CertificateArn':args.get('certificateArn'),
+                'IsDefault':True if args.get('isDefault') == 'True'  else False,
+            }
+
+            kwargs.update({'Certificates':[Certificates]})
+
+            response = client.add_listener_certificates(**kwargs)
+
+            if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+                return "The Listener Certificate was added"
+
+        except Exception as e:
+            return raise_error(e)
+
+    def remove_listener_certificates(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {'ListenerArn':args.get('listenerArn')}
+            Certificates = {
+                'CertificateArn':args.get('certificateArn'),
+            }
+
+            kwargs.update({'Certificates':[Certificates]})
+
+            response = client.remove_listener_certificates(**kwargs)
+
+            if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+                return "The Listener Certificate was Removed"
+
+        except Exception as e:
+            return raise_error(e)
+
+    def add_tags(args):
+        try:
+            client = aws_session(
+                    region = args.get('region'),
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            kwargs = {
+                    'ResourceArns':parse_resource_ids(args.get('resourceArns')),
+                    'Tags':parse_tag_field(args.get('tags'))
+                }
+            response = client.add_tags(**kwargs)
+            if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+                return "The recources were tagged successfully"
+
+        except Exception as e:
+            return raise_error(e)
+
+    def remove_tags(args):
+        try:
+            client = aws_session(
+                    region = args.get('region'),
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            kwargs = {
+                    'ResourceArns':parse_resource_ids(args.get('resourceArns')),
+                    'TagKeys':parse_resource_ids(args.get('tagKeys'))
+                }
+            response = client.remove_tags(**kwargs)
+            if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+                return "The recources Tages were removed successfully"
+
+        except Exception as e:
+            return raise_error(e)
+
+    def set_security_groups(args):
+        try:
+            client = aws_session(
+                    region = args.get('region'),
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            kwargs = {
+                    'LoadBalancerArn':args.get('loadBalancerArn'),
+                    'SecurityGroups':parse_resource_ids(args.get('securityGroups'))
+                }
+            response = client.set_security_groups(**kwargs)
+            if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+                return "The Load Balancer security groups were updated "
+
+        except Exception as e:
+            return raise_error(e)
+
+    def describe_tags(args):
+        try:
+            client = aws_session(
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            obj = vars(client._client_config)
+            kwargs = {'ResourceArns': args.get('resourceArns')}
+            data = []
+
+
+            response = client.describe_tags(**kwargs)
+            for i, resource in enumerate(response['TagDescriptions']):
+                data.append({
+                    'ResourceArn': resource['ResourceArn'],
+                    })
+                if 'Tags' in resource:
+                    for tag in resource['Tags']:
+                        data[i].update ({
+                            tag['Key']: tag['Value']
+                        })
+
+            if args.get('resourceType') == 'LoadBalancer':
+                ec = {'AWS.ELB.LoadBalancers(val.LoadBalancerArn === obj.ResourceArn)': raw}
+            if args.get('resourceType') == 'TargetGroup':
+                ec = {'AWS.ELB.TargetGroups(val.TargetGroupArn === obj.ResourceArn)': raw}
+
+            return  create_entry('AWS ELB Resource Tags',data, ec)
+
+        except Exception as e:
+            return raise_error(e)
+
+    def delete_target_group(args):
+        try:
+            client = aws_session(
+                    region = args.get('region'),
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            kwargs = {'TargetGroupArn':args.get('targetGroupArn')}
+            response = client.delete_target_group(**kwargs)
+            if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+                return "The Target Group was deleted"
+
+        except Exception as e:
+            return raise_error(e)
+
+    def delete_listener(args):
+        try:
+            client = aws_session(
+                    region = args.get('region'),
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            kwargs = {'ListenerArn':args.get('listenerArn')}
+            response = client.delete_listener(**kwargs)
+            if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+                return "The Listener was deleted"
+
+        except Exception as e:
+            return raise_error(e)
+
+    def delete_load_balancer(args):
+        try:
+            client = aws_session(
+                    region = args.get('region'),
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            kwargs = {'LoadBalancerArn':args.get('loadBalancerArn')}
+            response = client.delete_load_balancer(**kwargs)
+            if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+                return "The LoadB alancer was deleted"
+
+        except Exception as e:
+            return raise_error(e)
+
+    def waiter_load_balancer_available(args):
+        try:
+            client = aws_session(
+                    region = args.get('region'),
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            kwargs = {}
+            if args.get('loadBalancerArns') is not None:
+                kwargs.update({'LoadBalancerArns':parse_resource_ids(args.get('loadBalancerArns'))})
+            if args.get('names') is not None:
+                kwargs.update({'Names':parse_resource_ids(args.get('names'))})
+            if args.get('waiterDelay') is not None:
+                kwargs.update({'WaiterConfig':{'Delay':int(args.get('waiterDelay'))}})
+            if args.get('waiterMaxAttempts') is not None:
+                kwargs.update({'WaiterConfig':{'MaxAttempts':int(args.get('waiterMaxAttempts'))}})
+
+            waiter = client.get_waiter('load_balancer_available')
+            waiter.wait(**kwargs)
+
+            return "success"
+
+        except Exception as e:
+            return raise_error
+
+    def waiter_load_balancer_exists(args):
+        try:
+            client = aws_session(
+                    region = args.get('region'),
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            kwargs = {}
+            if args.get('loadBalancerArns') is not None:
+                kwargs.update({'LoadBalancerArns':parse_resource_ids(args.get('loadBalancerArns'))})
+            if args.get('names') is not None:
+                kwargs.update({'Names':parse_resource_ids(args.get('names'))})
+            if args.get('waiterDelay') is not None:
+                kwargs.update({'WaiterConfig':{'Delay':int(args.get('waiterDelay'))}})
+            if args.get('waiterMaxAttempts') is not None:
+                kwargs.update({'WaiterConfig':{'MaxAttempts':int(args.get('waiterMaxAttempts'))}})
+
+            waiter = client.get_waiter('load_balancer_exists')
+            waiter.wait(**kwargs)
+
+            return "success"
+
+        except Exception as e:
+            return raise_error
+
+    def waiter_load_balancers_deleted(args):
+        try:
+            client = aws_session(
+                    region = args.get('region'),
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            kwargs = {}
+            if args.get('loadBalancerArns') is not None:
+                kwargs.update({'LoadBalancerArns':parse_resource_ids(args.get('loadBalancerArns'))})
+            if args.get('names') is not None:
+                kwargs.update({'Names':parse_resource_ids(args.get('names'))})
+            if args.get('waiterDelay') is not None:
+                kwargs.update({'WaiterConfig':{'Delay':int(args.get('waiterDelay'))}})
+            if args.get('waiterMaxAttempts') is not None:
+                kwargs.update({'WaiterConfig':{'MaxAttempts':int(args.get('waiterMaxAttempts'))}})
+
+            waiter = client.get_waiter('load_balancers_deleted')
+            waiter.wait(**kwargs)
+
+            return "success"
+
+        except Exception as e:
+            return raise_error
+
+    def waiter_target_deregistered(args):
+        try:
+            client = aws_session(
+                    region = args.get('region'),
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            kwargs = {}
+            if args.get('targetGroupArn') is not None:
+                kwargs.update({'TargetGroupArn':args.get('targetGroupArn')})
+            if args.get('targetId') is not None:
+                Targets = {'Id': args.get('targetId')}
+                kwargs.update({'Targets':[Targets]})
+            if args.get('waiterDelay') is not None:
+                kwargs.update({'WaiterConfig':{'Delay':int(args.get('waiterDelay'))}})
+            if args.get('waiterMaxAttempts') is not None:
+                kwargs.update({'WaiterConfig':{'MaxAttempts':int(args.get('waiterMaxAttempts'))}})
+
+            waiter = client.get_waiter('target_deregistered')
+            waiter.wait(**kwargs)
+
+            return "success"
+
+        except Exception as e:
+            return raise_error
+
+    def waiter_target_in_service(args):
+        try:
+            client = aws_session(
+                    region = args.get('region'),
+                    roleArn = args.get('roleArn'),
+                    roleSessionName = args.get('roleSessionName'),
+                    roleSessionDuration = args.get('roleSessionDuration'),
+                )
+            kwargs = {}
+            if args.get('targetGroupArn') is not None:
+                kwargs.update({'TargetGroupArn':args.get('targetGroupArn')})
+            if args.get('targetId') is not None:
+                Targets = {'Id': args.get('targetId')}
+                kwargs.update({'Targets':[Targets]})
+            if args.get('waiterDelay') is not None:
+                kwargs.update({'WaiterConfig':{'Delay':int(args.get('waiterDelay'))}})
+            if args.get('waiterMaxAttempts') is not None:
+                kwargs.update({'WaiterConfig':{'MaxAttempts':int(args.get('waiterMaxAttempts'))}})
+
+            waiter = client.get_waiter('target_in_service')
+            waiter.wait(**kwargs)
+
+            return "success"
+
+        except Exception as e:
+            return raise_error
+
+    def test_function():
+        try:
+            client = aws_session()
+            response = client.describe_load_balancers()
+            if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+                return 'ok'
+
+        except Exception as error:
+            return error
+
+    if demisto.command() == 'test-module':
+        # This is the call made when pressing the integration test button.
+        result = test_function()
+
+    if demisto.command() == 'aws-elb-create-load-balancer':
+        result = create_load_balancer(demisto.args())
+
+    if demisto.command() == 'aws-elb-describe-load-balancers':
+        result = describe_load_balancers(demisto.args())
+
+    if demisto.command() == 'aws-elb-describe-listeners':
+        result = describe_listeners(demisto.args())
+
+    if demisto.command() == 'aws-elb-describe-target-groups':
+        result = describe_target_groups(demisto.args())
+
+    if demisto.command() == 'aws-elb-describe-listener-certificates':
+        result = describe_listener_certificates(demisto.args())
+
+    if demisto.command() == 'aws-elb-create-forward-listener':
+        result = create_forward_listener(demisto.args())
+
+    if demisto.command() == 'aws-elb-create-target-group':
+        result = create_target_group(demisto.args())
+
+    if demisto.command() == 'aws-elb-register-targets':
+        result = register_targets(demisto.args())
+
+    if demisto.command() == 'aws-elb-deregister-targets':
+        result = deregister_targets(demisto.args())
+
+    if demisto.command() == 'aws-elb-add-listener-certificates':
+        result = add_listener_certificates(demisto.args())
+
+    if demisto.command() == 'aws-elb-remove-listener-certificates':
+        result = remove_listener_certificates(demisto.args())
+
+    if demisto.command() == 'aws-elb-add-tags':
+        result = add_tags(demisto.args())
+
+    if demisto.command() == 'aws-elb-remove-tags':
+        result = remove_tags(demisto.args())
+
+    if demisto.command() == 'aws-elb-set-security-groups':
+        result = set_security_groups(demisto.args())
+
+    if demisto.command() == 'aws-elb-describe-tags':
+        result = describe_tags(demisto.args())
+
+    demisto.results(result)
+    sys.exit(0)
+  type: python
+  commands:
+  - name: aws-elb-create-load-balancer
+    arguments:
+    - name: name
+      required: true
+      description: The name of the load balancer.  This name must be unique per region
+        per account, can have a maximum of 32 characters, must contain only alphanumeric
+        characters or hyphens, must not begin or end with a hyphen, and must not begin
+        with "internal-".
+    - name: subnets
+      description: The IDs of the public subnets Separated by comma. You can specify
+        only one subnet per Availability Zone. You must specify either subnets or
+        subnet mappings.  Application Load Balancers -  You must specify subnets from
+        at least two Availability Zones.  Network Load Balancers - You can specify
+        subnets from one or more Availability Zones.
+    - name: subnetMappings
+      description: The IDs of the public subnets. You can specify only one subnet
+        per Availability Zone. You must specify either subnets or subnet mappings.  [Application
+        Load Balancers] You must specify subnets from at least two Availability Zones.
+        You cannot specify Elastic IP addresses for your subnets.  [Network Load Balancers]
+        You can specify subnets from one or more Availability Zones. You can specify
+        one Elastic IP address per subnet.
+    - name: securityGroups
+      description: Application Load Balancers - The IDs of the security groups for
+        the load balancer separated by comma.
+    - name: scheme
+      description: The nodes of an Internet-facing load balancer have public IP addresses.
+        The DNS name of an Internet-facing load balancer is publicly resolvable to
+        the public IP addresses of the nodes. Therefore, Internet-facing load balancers
+        can route requests from clients over the internet.  The nodes of an internal
+        load balancer have only private IP addresses. The DNS name of an internal
+        load balancer is publicly resolvable to the private IP addresses of the nodes.
+        Therefore, internal load balancers can only route requests from clients with
+        access to the VPC for the load balancer.  The default is an Internet-facing
+        load balancer.
+      defaultValue: internet-facing,internal
+    - name: tags
+      description: One or more tags to assign to the load balancer.
+    - name: type
+      description: ' The type of load balancer. The default is application .'
+      defaultValue: application,network
+    - name: ipAddressType
+      description: ' [Application Load Balancers] The type of IP addresses used by
+        the subnets for your load balancer. The possible values are ipv4 (for IPv4
+        addresses) and dualstack (for IPv4 and IPv6 addresses). Internal load balancers
+        must use ipv4 .'
+      defaultValue: ipv4,dualstack
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    outputs:
+    - contextPath: AWS.ELB.LoadBalancers.LoadBalancerArn
+      description: The Amazon Resource Name (ARN) of the load balancer.
+      type: string
+    - contextPath: 'AWS.ELB.LoadBalancers.DNSName '
+      description: The public DNS name of the load balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.CanonicalHostedZoneId
+      description: The ID of the Amazon Route 53 hosted zone associated with the load
+        balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.CreatedTime
+      description: The date and time the load balancer was created.
+      type: date
+    - contextPath: AWS.ELB.LoadBalancers.LoadBalancerName
+      description: The name of the load balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.Scheme
+      description: The nodes of an Internet-facing load balancer have public IP addresses.
+        The DNS name of an Internet-facing load balancer is publicly resolvable to
+        the public IP addresses of the nodes. Therefore, Internet-facing load balancers
+        can route requests from clients over the internet.  The nodes of an internal
+        load balancer have only private IP addresses. The DNS name of an internal
+        load balancer is publicly resolvable to the private IP addresses of the nodes.
+        Therefore, internal load balancers can only route requests from clients with
+        access to the VPC for the load balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.VpcId
+      description: The ID of the VPC for the load balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.State.Code
+      description: The state code. The initial state of the load balancer is provisioning
+        . After the load balancer is fully set up and ready to route traffic, its
+        state is active . If the load balancer could not be set up, its state is failed
+        .
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.State.Reason
+      description: A description of the state.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.Type
+      description: The type of load balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.AvailabilityZones.ZoneName
+      description: The name of the Availability Zone.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.AvailabilityZones.SubnetId
+      description: The ID of the subnet.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.AvailabilityZones.LoadBalancerAddresses.IpAddress
+      description: The static IP address.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.AvailabilityZones.LoadBalancerAddresses.AllocationId
+      description: '[Network Load Balancers] The allocation ID of the Elastic IP address.'
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.SecurityGroups
+      description: The IDs of the security groups for the load balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.IpAddressType
+      description: The type of IP addresses used by the subnets for your load balancer.
+        The possible values are ipv4 (for IPv4 addresses) and dualstack (for IPv4
+        and IPv6 addresses).
+      type: string
+    description: Creates an Application Load Balancer or a Network Load Balancer.
+    execution: true
+  - name: aws-elb-describe-load-balancers
+    arguments:
+    - name: loadBalancerArns
+      description: The Amazon Resource Names (ARN) of the load balancers. You can
+        specify up to 20 load balancers in a single call.
+    - name: names
+      description: The names of the load balancers.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    outputs:
+    - contextPath: AWS.ELB.LoadBalancers.LoadBalancerArn
+      description: The Amazon Resource Name (ARN) of the load balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.DNSName
+      description: The public DNS name of the load balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.CanonicalHostedZoneId
+      description: The ID of the Amazon Route 53 hosted zone associated with the load
+        balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.CreatedTime
+      description: The date and time the load balancer was created.
+      type: date
+    - contextPath: AWS.ELB.LoadBalancers.LoadBalancerName
+      description: The name of the load balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.Scheme
+      description: The nodes of an Internet-facing load balancer have public IP addresses.
+        The DNS name of an Internet-facing load balancer is publicly resolvable to
+        the public IP addresses of the nodes. Therefore, Internet-facing load balancers
+        can route requests from clients over the internet.  The nodes of an internal
+        load balancer have only private IP addresses. The DNS name of an internal
+        load balancer is publicly resolvable to the private IP addresses of the nodes.
+        Therefore, internal load balancers can only route requests from clients with
+        access to the VPC for the load balancer.
+      type: string
+    - contextPath: 'AWS.ELB.LoadBalancers.VpcId '
+      description: The ID of the VPC for the load balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.State.Code
+      description: The state code. The initial state of the load balancer is provisioning.
+        After the load balancer is fully set up and ready to route traffic, its state
+        is active . If the load balancer could not be set up, its state is failed.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.State.Reason
+      description: A description of the state.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.Type
+      description: The type of load balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.AvailabilityZones.ZoneName
+      description: The name of the Availability Zone.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.AvailabilityZones.SubnetId
+      description: The ID of the subnet.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.AvailabilityZones.LoadBalancerAddresses.IpAddress
+      description: The static IP address.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.AvailabilityZones.LoadBalancerAddresses.AllocationId
+      description: '[Network Load Balancers] The allocation ID of the Elastic IP address.'
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.SecurityGroups
+      description: The IDs of the security groups for the load balancer.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.IpAddressType
+      description: The type of IP addresses used by the subnets for your load balancer.
+        The possible values are ipv4 (for IPv4 addresses) and dualstack (for IPv4
+        and IPv6 addresses).
+      type: string
+    description: Describes the specified load balancers or all of your load balancers.
+  - name: aws-elb-describe-listeners
+    arguments:
+    - name: loadBalancerArn
+      description: The Amazon Resource Name (ARN) of the load balancer.
+    - name: listenerArns
+      description: The Amazon Resource Names (ARN) of the listeners.
+    outputs:
+    - contextPath: AWS.ELB.Listeners.ListenerArn
+      description: The Amazon Resource Name (ARN) of the listener.
+      type: string
+    - contextPath: AWS.ELB.Listeners.LoadBalancerArn
+      description: The Amazon Resource Name (ARN) of the load balancer.
+      type: string
+    - contextPath: AWS.ELB.Listeners.Port
+      description: The port on which the load balancer is listening.
+      type: string
+    - contextPath: AWS.ELB.Listeners.Protocol
+      description: The protocol for connections from clients to the load balancer.
+      type: string
+    - contextPath: AWS.ELB.Listeners.Certificates.CertificateArn
+      description: The Amazon Resource Name (ARN) of the certificate.
+      type: string
+    - contextPath: AWS.ELB.Listeners.Certificates.IsDefault
+      description: Indicates whether the certificate is the default certificate.
+      type: boolean
+    - contextPath: AWS.ELB.Listeners.SslPolicy
+      description: The security policy that defines which ciphers and protocols are
+        supported. The default is the current predefined security policy.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.Type
+      description: 'The type of action. Each rule must include exactly one of the
+        following types of actions: forward , fixed-response , or redirect .'
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.TargetGroupArn
+      description: The Amazon Resource Name (ARN) of the target group. Specify only
+        when Type is forward .
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.Issuer
+      description: The OIDC issuer identifier of the IdP. This must be a full URL,
+        including the HTTPS protocol, the domain, and the path.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.AuthorizationEndpoint
+      description: The authorization endpoint of the IdP. This must be a full URL,
+        including the HTTPS protocol, the domain, and the path.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.TokenEndpoint
+      description: The token endpoint of the IdP. This must be a full URL, including
+        the HTTPS protocol, the domain, and the path.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.UserInfoEndpoint
+      description: The user info endpoint of the IdP. This must be a full URL, including
+        the HTTPS protocol, the domain, and the path.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.ClientId
+      description: The OAuth 2.0 client identifier.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.ClientSecret
+      description: The OAuth 2.0 client secret.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.SessionCookieName
+      description: The name of the cookie used to maintain session information. The
+        default is AWSELBAuthSessionCookie.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.Scope
+      description: The set of user claims to be requested from the IdP. The default
+        is openid .  To verify which scope values your IdP supports and how to separate
+        multiple values, see the documentation for your IdP.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.SessionTimeout
+      description: The maximum duration of the authentication session, in seconds.
+        The default is 604800 seconds (7 days).
+      type: number
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.AuthenticationRequestExtraParams
+      description: The query parameters (up to 10) to include in the redirect request
+        to the authorization endpoint.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.OnUnauthenticatedRequest
+      description: 'The behavior if the user is not authenticated. '
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.UserPoolArn
+      description: The Amazon Resource Name (ARN) of the Amazon Cognito user pool.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.UserPoolClientId
+      description: The ID of the Amazon Cognito user pool client.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.UserPoolDomain
+      description: The domain prefix or fully-qualified domain name of the Amazon
+        Cognito user pool.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.SessionCookieName
+      description: The name of the cookie used to maintain session information. The
+        default is AWSELBAuthSessionCookie.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.Scope
+      description: The set of user claims to be requested from the IdP. The default
+        is openid .  To verify which scope values your IdP supports and how to separate
+        multiple values, see the documentation for your IdP.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.SessionTimeout
+      description: The maximum duration of the authentication session, in seconds.
+        The default is 604800 seconds (7 days).
+      type: number
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.AuthenticationRequestExtraParams
+      description: The query parameters (up to 10) to include in the redirect request
+        to the authorization endpoint.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.OnUnauthenticatedRequest
+      description: The behavior if the user is not authenticated.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.Order
+      description: The order for the action. This value is required for rules with
+        multiple actions. The action with the lowest value for order is performed
+        first. The final action to be performed must be a forward or a fixed-response
+        action.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.RedirectConfig.Protocol
+      description: 'The protocol. You can specify HTTP, HTTPS, or #{protocol}. You
+        can redirect HTTP to HTTP, HTTP to HTTPS, and HTTPS to HTTPS. You cannot redirect
+        HTTPS to HTTP.'
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.RedirectConfig.Port
+      description: The port. You can specify a value from 1 to 65535
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.RedirectConfig.Host
+      description: 'The hostname. This component is not percent-encoded. '
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.RedirectConfig.Path
+      description: The absolute path, starting with the leading "/". This component
+        is not percent-encoded.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.RedirectConfig.Query
+      description: 'The query parameters, URL-encoded when necessary, but not percent-encoded. '
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.RedirectConfig.StatusCode
+      description: The HTTP redirect code. The redirect is either permanent (HTTP
+        301) or temporary (HTTP 302).
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.FixedResponseConfig.MessageBody
+      description: The message.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.FixedResponseConfig.StatusCode
+      description: The HTTP response code (2XX, 4XX, or 5XX).
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.FixedResponseConfig.ContentType
+      description: The content type.
+      type: string
+    description: Describes the specified listeners or the listeners for the specified
+      Application Load Balancer or Network Load Balancer. You must specify either
+      a load balancer or one or more listeners.
+  - name: aws-elb-describe-target-groups
+    arguments:
+    - name: loadBalancerArn
+      description: The Amazon Resource Name (ARN) of the load balancer.
+    - name: targetGroupArns
+      description: The Amazon Resource Names (ARN) of the target groups.
+    - name: names
+      description: The names of the target groups.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    outputs:
+    - contextPath: AWS.ELB.TargetGroups.TargetGroupArn
+      description: The Amazon Resource Name (ARN) of the target group.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.TargetGroupName
+      description: The name of the target group.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.Protocol
+      description: The protocol to use for routing traffic to the targets.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.Port
+      description: The port on which the targets are listening.
+      type: number
+    - contextPath: 'AWS.ELB.TargetGroups.VpcId '
+      description: The ID of the VPC for the targets.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.HealthCheckProtocol
+      description: The protocol to use to connect with the target.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.HealthCheckPort
+      description: The port to use to connect with the target.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.HealthCheckIntervalSeconds
+      description: The approximate amount of time, in seconds, between health checks
+        of an individual target.
+      type: number
+    - contextPath: AWS.ELB.TargetGroups.HealthCheckTimeoutSeconds
+      description: The amount of time, in seconds, during which no response means
+        a failed health check.
+      type: number
+    - contextPath: AWS.ELB.TargetGroups.HealthyThresholdCount
+      description: The number of consecutive health checks successes required before
+        considering an unhealthy target healthy.
+      type: number
+    - contextPath: AWS.ELB.TargetGroups.UnhealthyThresholdCount
+      description: The number of consecutive health check failures required before
+        considering the target unhealthy.
+      type: number
+    - contextPath: AWS.ELB.TargetGroups.HealthCheckPath
+      description: The destination for the health check request.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.Matcher.HttpCode
+      description: The HTTP codes.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.LoadBalancerArns
+      description: The Amazon Resource Names (ARN) of the load balancers that route
+        traffic to this target group.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.TargetType
+      description: The type of target that you must specify when registering targets
+        with this target group. The possible values are instance (targets are specified
+        by instance ID) or ip (targets are specified by IP address).
+      type: string
+    description: 'Describes the specified target groups or all of your target groups.
+      By default, all target groups are described. Alternatively, you can specify
+      one of the following to filter the results: the ARN of the load balancer, the
+      names of one or more target groups, or the ARNs of one or more target groups.'
+  - name: aws-elb-describe-listener-certificates
+    arguments:
+    - name: listenerArn
+      required: true
+      description: The Amazon Resource Names (ARN) of the listener.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    outputs:
+    - contextPath: AWS.ELB.Listener.Certificates.CertificateArn
+      description: The Amazon Resource Name (ARN) of the certificate.
+      type: string
+    - contextPath: AWS.ELB.Listener.Certificates.IsDefault
+      description: Indicates whether the certificate is the default certificate.
+      type: boolean
+    description: Describes the certificates for the specified secure listener.
+  - name: aws-elb-describe-target-health
+    arguments:
+    - name: targetGroupArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the target group.
+    outputs:
+    - contextPath: AWS.ELB.TargetGroups.TargetHealthDescriptions.Id
+      description: The ID of the target.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.TargetHealthDescriptions.Port
+      description: The port on which the target is listening.
+      type: number
+    - contextPath: AWS.ELB.TargetGroups.TargetHealthDescriptions.AvailabilityZone
+      description: An Availability Zone.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.TargetHealthDescriptions.HealthCheckPort
+      description: The port to use to connect with the target.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.TargetHealthDescriptions.State
+      description: The state of the target.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.TargetHealthDescriptionsReason.
+      description: 'The reason code. '
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.TargetHealthDescriptionsDescription.
+      description: A description of the target health .
+      type: string
+    description: Describes the health of your targets.
+  - name: aws-elb-create-forward-listener
+    arguments:
+    - name: loadBalancerArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the load balancer.
+    - name: protocol
+      required: true
+      auto: PREDEFINED
+      predefined:
+      - HTTP
+      - HTTPS
+      - TCP
+      description: The protocol for connections from clients to the load balancer.
+        For Application Load Balancers, the supported protocols are HTTP and HTTPS.
+        For Network Load Balancers, the supported protocol is TCP.
+    - name: port
+      required: true
+      description: The port on which the load balancer is listening.
+    - name: sslPolicy
+      description: '[HTTPS listeners] The security policy that defines which ciphers
+        and protocols are supported. The default is the current predefined security
+        policy.'
+    - name: certificateArn
+      description: The Amazon Resource Name (ARN) of the certificate. The default
+        SSL server certificate. You must provide exactly one default certificate.
+        To create a certificate list, use AddListenerCertificates .
+    - name: targetGroupArn
+      description: The Amazon Resource Name (ARN) of the target group.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    outputs:
+    - contextPath: AWS.ELB.Listeners.ListenerArn
+      description: The Amazon Resource Name (ARN) of the listener.
+      type: string
+    - contextPath: AWS.ELB.Listeners.LoadBalancerArn
+      description: The Amazon Resource Name (ARN) of the load balancer.
+      type: string
+    - contextPath: AWS.ELB.Listeners.Port
+      description: The port on which the load balancer is listening.
+      type: string
+    - contextPath: AWS.ELB.Listeners.Protocol
+      description: The protocol for connections from clients to the load balancer.
+      type: string
+    - contextPath: AWS.ELB.Listeners.Certificates.CertificateArn
+      description: The Amazon Resource Name (ARN) of the certificate.
+      type: string
+    - contextPath: AWS.ELB.Listeners.Certificates.IsDefault
+      description: Indicates whether the certificate is the default certificate.
+      type: boolean
+    - contextPath: AWS.ELB.Listeners.SslPolicy
+      description: The security policy that defines which ciphers and protocols are
+        supported. The default is the current predefined security policy.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.Type
+      description: 'The type of action. Each rule must include exactly one of the
+        following types of actions: forward , fixed-response , or redirect .'
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.TargetGroupArn
+      description: The Amazon Resource Name (ARN) of the target group. Specify only
+        when Type is forward .
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.Issuer
+      description: The OIDC issuer identifier of the IdP. This must be a full URL,
+        including the HTTPS protocol, the domain, and the path.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.AuthorizationEndpoint
+      description: The authorization endpoint of the IdP. This must be a full URL,
+        including the HTTPS protocol, the domain, and the path.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.TokenEndpoint
+      description: The token endpoint of the IdP. This must be a full URL, including
+        the HTTPS protocol, the domain, and the path.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.UserInfoEndpoint
+      description: The user info endpoint of the IdP. This must be a full URL, including
+        the HTTPS protocol, the domain, and the path.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.ClientId
+      description: The OAuth 2.0 client identifier.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.ClientSecret
+      description: The OAuth 2.0 client secret.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.SessionCookieName
+      description: The name of the cookie used to maintain session information. The
+        default is AWSELBAuthSessionCookie.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.Scope
+      description: The set of user claims to be requested from the IdP. The default
+        is openid .  To verify which scope values your IdP supports and how to separate
+        multiple values, see the documentation for your IdP.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.SessionTimeout
+      description: The maximum duration of the authentication session, in seconds.
+        The default is 604800 seconds (7 days).
+      type: number
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.AuthenticationRequestExtraParams
+      description: The query parameters (up to 10) to include in the redirect request
+        to the authorization endpoint.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateOidcConfig.OnUnauthenticatedRequest
+      description: 'The behavior if the user is not authenticated. '
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.UserPoolArn
+      description: The Amazon Resource Name (ARN) of the Amazon Cognito user pool.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.UserPoolClientId
+      description: The ID of the Amazon Cognito user pool client.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.UserPoolDomain
+      description: The domain prefix or fully-qualified domain name of the Amazon
+        Cognito user pool.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.SessionCookieName
+      description: The name of the cookie used to maintain session information. The
+        default is AWSELBAuthSessionCookie.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.Scope
+      description: The set of user claims to be requested from the IdP. The default
+        is openid .  To verify which scope values your IdP supports and how to separate
+        multiple values, see the documentation for your IdP.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.SessionTimeout
+      description: The maximum duration of the authentication session, in seconds.
+        The default is 604800 seconds (7 days).
+      type: number
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.AuthenticationRequestExtraParams
+      description: The query parameters (up to 10) to include in the redirect request
+        to the authorization endpoint.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.AuthenticateCognitoConfig.OnUnauthenticatedRequest
+      description: The behavior if the user is not authenticated.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.Order
+      description: The order for the action. This value is required for rules with
+        multiple actions. The action with the lowest value for order is performed
+        first. The final action to be performed must be a forward or a fixed-response
+        action.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.RedirectConfig.Protocol
+      description: 'The protocol. You can specify HTTP, HTTPS, or #{protocol}. You
+        can redirect HTTP to HTTP, HTTP to HTTPS, and HTTPS to HTTPS. You cannot redirect
+        HTTPS to HTTP.'
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.RedirectConfig.Port
+      description: The port. You can specify a value from 1 to 65535
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.RedirectConfig.Host
+      description: 'The hostname. This component is not percent-encoded. '
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.RedirectConfig.Path
+      description: The absolute path, starting with the leading "/". This component
+        is not percent-encoded.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.RedirectConfig.Query
+      description: 'The query parameters, URL-encoded when necessary, but not percent-encoded. '
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.RedirectConfig.StatusCode
+      description: The HTTP redirect code. The redirect is either permanent (HTTP
+        301) or temporary (HTTP 302).
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.FixedResponseConfig.MessageBody
+      description: The message.
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.FixedResponseConfig.StatusCode
+      description: The HTTP response code (2XX, 4XX, or 5XX).
+      type: string
+    - contextPath: AWS.ELB.Listeners.DefaultActions.FixedResponseConfig.ContentType
+      description: The content type.
+      type: string
+    description: Creates a forward listener for the specified Application Load Balancer
+      or Network Load Balancer.
+    execution: true
+  - name: aws-elb-create-target-group
+    arguments:
+    - name: name
+      required: true
+      description: The name of the target group.  This name must be unique per region
+        per account, can have a maximum of 32 characters, must contain only alphanumeric
+        characters or hyphens, and must not begin or end with a hyphen.
+    - name: protocol
+      required: true
+      auto: PREDEFINED
+      predefined:
+      - HTTP
+      - HTTPS
+      - TCP
+      description: The protocol to use for routing traffic to the targets. For Application
+        Load Balancers, the supported protocols are HTTP and HTTPS. For Network Load
+        Balancers, the supported protocol is TCP.
+    - name: port
+      required: true
+      description: The port on which the targets receive traffic. This port is used
+        unless you specify a port override when registering the target.
+    - name: vpcId
+      required: true
+      description: The identifier of the virtual private cloud (VPC).
+    - name: healthCheckProtocol
+      auto: PREDEFINED
+      predefined:
+      - HTTP
+      - HTTPS
+      - TCP
+      description: The protocol the load balancer uses when performing health checks
+        on targets. The TCP protocol is supported only if the protocol of the target
+        group is TCP. For Application Load Balancers, the default is HTTP. For Network
+        Load Balancers, the default is TCP.
+    - name: healthCheckPort
+      description: The port the load balancer uses when performing health checks on
+        targets. The default is traffic-port , which is the port on which each target
+        receives traffic from the load balancer.
+    - name: healthCheckPath
+      description: HTTP/HTTPS health checks] The ping path that is the destination
+        on the targets for health checks. The default is /
+    - name: healthCheckIntervalSeconds
+      description: The approximate amount of time, in seconds, between health checks
+        of an individual target. For Application Load Balancers, the range is 5–300
+        seconds. For Network Load Balancers, the supported values are 10 or 30 seconds.
+        The default is 30 seconds.
+    - name: healthCheckTimeoutSeconds
+      description: The amount of time, in seconds, during which no response from a
+        target means a failed health check. For Application Load Balancers, the range
+        is 2–60 seconds and the default is 5 seconds. For Network Load Balancers,
+        this is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP
+        health checks.
+    - name: healthyThresholdCount
+      description: The number of consecutive health checks successes required before
+        considering an unhealthy target healthy. For Application Load Balancers, the
+        default is 5. For Network Load Balancers, the default is 3.
+    - name: unhealthyThresholdCount
+      description: The number of consecutive health check failures required before
+        considering a target unhealthy. For Application Load Balancers, the default
+        is 2. For Network Load Balancers, this value must be the same as the healthy
+        threshold count.
+    - name: httpCode
+      description: '[HTTP/HTTPS health checks] The HTTP codes to use when checking
+        for a successful response from a target. For Application Load Balancers, you
+        can specify values between 200 and 499, and the default value is 200. You
+        can specify multiple values (for example, "200,202") or a range of values
+        (for example, "200-299").  For Network Load Balancers, this is 200–399.'
+    - name: targetType
+      description: The type of target that you must specify when registering targets
+        with this target group. The possible values are instance (targets are specified
+        by instance ID) or ip (targets are specified by IP address). The default is
+        instance . You can't specify targets for a target group using both instance
+        IDs and IP addresses.  If the target type is ip , specify IP addresses from
+        the subnets of the virtual private cloud (VPC) for the target group, the RFC
+        1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598
+        range (100.64.0.0/10). You can't specify publicly routable IP addresses.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    outputs:
+    - contextPath: AWS.ELB.TargetGroups.TargetGroupArn
+      description: The Amazon Resource Name (ARN) of the target group.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.TargetGroupName
+      description: The name of the target group.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.Protocol
+      description: The protocol to use for routing traffic to the targets.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.Port
+      description: The port on which the targets are listening.
+      type: number
+    - contextPath: AWS.ELB.TargetGroups.VpcId
+      description: The ID of the VPC for the targets.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.HealthCheckProtocol
+      description: The protocol to use to connect with the target.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.HealthCheckPort
+      description: The port to use to connect with the target.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.HealthCheckIntervalSeconds
+      description: The approximate amount of time, in seconds, between health checks
+        of an individual target.
+      type: number
+    - contextPath: AWS.ELB.TargetGroups.HealthCheckTimeoutSeconds
+      description: The amount of time, in seconds, during which no response means
+        a failed health check.
+      type: number
+    - contextPath: AWS.ELB.TargetGroups.HealthyThresholdCount
+      description: The number of consecutive health checks successes required before
+        considering an unhealthy target healthy.
+      type: number
+    - contextPath: AWS.ELB.TargetGroups.UnhealthyThresholdCount
+      description: The number of consecutive health check failures required before
+        considering the target unhealthy.
+      type: number
+    - contextPath: AWS.ELB.TargetGroups.HealthCheckPath
+      description: The destination for the health check request.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.Matcher.HttpCode
+      description: The HTTP codes to use when checking for a successful response from
+        a target.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.LoadBalancerArns
+      description: The Amazon Resource Names (ARN) of the load balancers that route
+        traffic to this target group.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.TargetType
+      description: The type of target that you must specify when registering targets
+        with this target group. The possible values are instance (targets are specified
+        by instance ID) or ip (targets are specified by IP address).
+      type: string
+    description: Creates a target group.
+    execution: true
+  - name: aws-elb-register-targets
+    arguments:
+    - name: TargetGroupArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the target group.
+    - name: Id
+      required: true
+      description: The ID of the target. If the target type of the target group is
+        instance , specify an instance ID. If the target type is ip , specify an IP
+        address.
+    - name: port
+      description: The port on which the target is listening.
+    - name: availabilityZone
+      description: An Availability Zone or all . This determines whether the target
+        receives traffic from the load balancer nodes in the specified Availability
+        Zone or from all enabled Availability Zones for the load balancer.  This parameter
+        is not supported if the target type of the target group is instance . If the
+        IP address is in a subnet of the VPC for the target group, the Availability
+        Zone is automatically detected and this parameter is optional. If the IP address
+        is outside the VPC, this parameter is required.  With an Application Load
+        Balancer, if the IP address is outside the VPC for the target group, the only
+        supported value is all.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: Registers the specified targets with the specified target group.  You
+      can register targets by instance ID or by IP address. If the target is an EC2
+      instance, it must be in the running state when you register it.  By default,
+      the load balancer routes requests to registered targets using the protocol and
+      port for the target group. Alternatively, you can override the port for a target
+      when you register it. You can register each EC2 instance or IP address with
+      the same target group multiple times using different ports.
+    execution: true
+  - name: aws-elb-deregister-targets
+    arguments:
+    - name: targetGroupArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the target group.
+    - name: Id
+      required: true
+      description: The ID of the target. If the target type of the target group is
+        instance , specify an instance ID. If the target type is ip , specify an IP
+        address.
+    - name: port
+      description: The port on which the target is listening.
+    - name: availabilityZone
+      description: An Availability Zone or all . This determines whether the target
+        receives traffic from the load balancer nodes in the specified Availability
+        Zone or from all enabled Availability Zones for the load balancer.  This parameter
+        is not supported if the target type of the target group is instance . If the
+        IP address is in a subnet of the VPC for the target group, the Availability
+        Zone is automatically detected and this parameter is optional. If the IP address
+        is outside the VPC, this parameter is required.  With an Application Load
+        Balancer, if the IP address is outside the VPC for the target group, the only
+        supported value is all.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: Deregisters the specified targets from the specified target group.
+      After the targets are deregistered, they no longer receive traffic from the
+      load balancer.
+    execution: true
+  - name: aws-elb-add-listener-certificates
+    arguments:
+    - name: listenerArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the listener.
+    - name: certificateArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the certificate. The certificate
+        to add. You can specify one certificate per call.
+    - name: isDefault
+      auto: PREDEFINED
+      predefined:
+      - "True"
+      - "False"
+      description: Indicates whether the certificate is the default certificate.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: Adds the specified certificate to the specified secure listener.  If
+      the certificate was already added, the call is successful but the certificate
+      is not added again.
+    execution: true
+  - name: aws-elb-remove-listener-certificates
+    arguments:
+    - name: listenerArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the listener.
+    - name: certificateArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the certificate. The certificate
+        to remove. You can specify one certificate per call.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: Removes the specified certificate from the specified secure listener.  You
+      can't remove the default certificate for a listener.
+    execution: true
+  - name: aws-elb-add-tags
+    arguments:
+    - name: resourceArns
+      required: true
+      description: The Amazon Resource Name (ARN) of the resource. Comma separated
+        list.
+    - name: tags
+      required: true
+      description: One or more tags.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: Adds the specified tags to the specified Elastic Load Balancing resource.
+      You can tag your Application Load Balancers, Network Load Balancers, and your
+      target groups.  Each tag consists of a key and an optional value. If a resource
+      already has a tag with the same key, AddTags updates its value.
+    execution: true
+  - name: aws-elb-remove-tags
+    arguments:
+    - name: resourceArns
+      required: true
+      description: The Amazon Resource Name (ARN) of the resource. Comma separated
+        list.
+    - name: tagKeys
+      required: true
+      description: The tag keys for the tags to remove. Comma separated list.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: Removes the specified tags from the specified Elastic Load Balancing
+      resource.
+    execution: true
+  - name: aws-elb-set-security-groups
+    arguments:
+    - name: loadBalancerArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the load balancer.
+    - name: securityGroups
+      required: true
+      description: The IDs of the security groups. Comma separated list.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: Associates the specified security groups with the specified Application
+      Load Balancer. The specified security groups override the previously associated
+      security groups.  You can't specify a security group for a Network Load Balancer.
+    execution: true
+  - name: aws-elb-describe-tags
+    arguments:
+    - name: resourceType
+      required: true
+      auto: PREDEFINED
+      predefined:
+      - LoadBalancer
+      - TargetGroup
+      description: The type of the ELB resource.
+    - name: resourceArns
+      required: true
+      description: The Amazon Resource Names (ARN) of the resources.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    outputs:
+    - contextPath: AWS.ELB.LoadBalancers.Tags.Key
+      description: The key of the tag. For Load Balancer Resource.
+      type: string
+    - contextPath: AWS.ELB.LoadBalancers.Tags.Value
+      description: The value of the tag. For Load Balancer Resource.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.Tags.Key
+      description: The key of the tag. For Target Groups Resource.
+      type: string
+    - contextPath: AWS.ELB.TargetGroups.Tags.Value
+      description: The value of the tag. For Target Groups Resource.
+      type: string
+    description: Describes the tags for the specified resources. You can describe
+      the tags for one or more Application Load Balancers, Network Load Balancers,
+      and target groups.
+  - name: aws-elb-delete-target-group
+    arguments:
+    - name: targetGroupArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the target group.
+    description: Deletes the specified target group.  You can delete a target group
+      if it is not referenced by any actions. Deleting a target group also deletes
+      any associated health checks.
+    execution: true
+  - name: aws-elb-delete-listener
+    arguments:
+    - name: listenerArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the listener.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: Deletes the specified listener.  Alternatively, your listener is
+      deleted when you delete the load balancer to which it is attached, using DeleteLoadBalancer.
+    execution: true
+  - name: aws-elb-delete-load-balancer
+    arguments:
+    - name: loadBalancerArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the load balancer.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: Deletes the specified Application Load Balancer or Network Load Balancer
+      and its attached listeners.  You can't delete a load balancer if deletion protection
+      is enabled. If the load balancer does not exist or has already been deleted,
+      the call succeeds.  Deleting a load balancer does not affect its registered
+      targets. For example, your EC2 instances continue to run and are still registered
+      to their target groups. If you no longer need these EC2 instances, you can stop
+      or terminate them.
+    execution: true
+  - name: aws-elb-waiter-loadbalancer-available
+    arguments:
+    - name: loadBalancerArns
+      description: The Amazon Resource Names (ARN) of the load balancers. You can
+        specify up to 20 load balancers in a single call.
+    - name: names
+      description: The names of the load balancers.
+    - name: waiterDelay
+      description: The amount of time in seconds to wait between attempts. Default
+        15.
+    - name: waiterMaxAttempts
+      description: The maximum number of attempts to be made. Default 40.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: A waiter function that runs every 15  seconds until a successful
+      state is reached.
+  - name: aws-elb-waiter-loadbalancer-exists
+    arguments:
+    - name: loadBalancerArns
+      description: The Amazon Resource Names (ARN) of the load balancers. You can
+        specify up to 20 load balancers in a single call.
+    - name: names
+      description: The names of the load balancers.
+    - name: waiterDelay
+      description: The amount of time in seconds to wait between attempts. Default
+        15.
+    - name: waiterMaxAttempts
+      description: The maximum number of attempts to be made. Default 40.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: A waiter function that runs every 15  seconds until a successful
+      state is reached.
+  - name: aws-elb-waiter-loadbalancers-deleted
+    arguments:
+    - name: loadBalancerArns
+      description: The Amazon Resource Names (ARN) of the load balancers. You can
+        specify up to 20 load balancers in a single call.
+    - name: names
+      description: The names of the load balancers.
+    - name: waiterDelay
+      description: The amount of time in seconds to wait between attempts. Default
+        15.
+    - name: waiterMaxAttempts
+      description: The maximum number of attempts to be made. Default 40.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: A waiter function that runs every 15  seconds until a successful
+      state is reached.
+  - name: aws-elb-waiter-target-deregistered
+    arguments:
+    - name: targetGroupArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the target group.
+    - name: targetId
+      required: true
+      description: The ID of the target. If the target type of the target group is
+        instance , specify an instance ID. If the target type is ip , specify an IP
+        address.
+    - name: waiterDelay
+      description: The amount of time in seconds to wait between attempts. Default
+        15.
+    - name: waiterMaxAttempts
+      description: The maximum number of attempts to be made. Default 40.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: A waiter function that runs every 15  seconds until a successful
+      state is reached.
+  - name: aws-elb-waiter_target-in-service
+    arguments:
+    - name: targetGroupArn
+      required: true
+      description: The Amazon Resource Name (ARN) of the target group.
+    - name: targetId
+      required: true
+      description: The ID of the target. If the target type of the target group is
+        instance , specify an instance ID. If the target type is ip , specify an IP
+        address.
+    - name: waiterDelay
+      description: The amount of time in seconds to wait between attempts. Default
+        15.
+    - name: waiterMaxAttempts
+      description: The maximum number of attempts to be made. Default 40.
+    - name: region
+      description: The AWS Region, if not specified the default region will be used
+    - name: roleArn
+      description: The Amazon Resource Name (ARN) of the role to assume.
+    - name: roleSessionName
+      description: An identifier for the assumed role session.
+    - name: roleSessionDuration
+      description: The duration, in seconds, of the role session. The value can range
+        from 900 seconds (15 minutes) up to the maximum session duration setting for
+        the role.
+    description: A waiter function that runs every 15  seconds until a successful
+      state is reached.
+  dockerimage: demisto/boto3
+  runonce: false
