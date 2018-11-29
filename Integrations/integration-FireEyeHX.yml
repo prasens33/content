@@ -1736,10 +1736,12 @@ script:
             res["HostName"] = res.get("host", {}).get("hostname")
             res["HostUrl"] = res.get("host", {}).get("url")
             del res['host']
-            for resData in res.get("results"):
+            res["Results"] = res.get("results")
+            del res["results"]
+            for resData in res.get("Results"):
                 resData.update(resData.get("data", {}))
                 del resData['data']
-
+        return results
     def start_search():
 
         args = demisto.args()
@@ -2919,8 +2921,47 @@ script:
       - stop
       description: Method in which search should be stopped after finding <limit> number of results
     outputs:
+    - contextPath: FireEyeHX.Search.Results.Timestamp - Modified
+      description: Time when the entry was last modified
+      type: string
+    - contextPath: FireEyeHX.Search.Results.File Text Written
+      description: The file text content
+      type: string
+    - contextPath: FireEyeHX.Search.Results.File Name
+      description: Name of the file
+      type: string
+    - contextPath: FireEyeHX.Search.Results.File Full Path
+      description: The full path of the file
+      type: string
+    - contextPath: FireEyeHX.Search.Results.File Bytes Written
+      description: Number of bytes written to the file
+      type: string
+    - contextPath: FireEyeHX.Search.Results.Size in bytes
+      description: Size of the file in bytes
+      type: string
+    - contextPath: FireEyeHX.Search.Results.Browser Version
+      description: Version of the browser
+      type: string
+    - contextPath: FireEyeHX.Search.Results.Browser Name
+      description: Name of the browser
+      type: string
+    - contextPath: FireEyeHX.Search.Results.Cookie Name
+      description: Name of the cookie
+      type: string
+    - contextPath: FireEyeHX.Search.Results.DNS Hostname
+      description: Name of the DNS host
+      type: string
+    - contextPath: FireEyeHX.Search.Results.URL
+      description: The event URL
+      type: string
+    - contextPath: FireEyeHX.Search.Results.Username
+      description: The event username
+      type: string
+    - contextPath: FireEyeHX.Search.Results.File MD5 Hash
+      description: MD5 hash of the file
+      type: string
     - contextPath: FireEyeHX.Search.HostID
-      description: ID of host
+      description: ID of the host
       type: string
     - contextPath: FireEyeHX.Search.HostName
       description: Name of host
@@ -2938,7 +2979,7 @@ script:
       description: Port
       type: number
     - contextPath: FireEyeHX.Search.Results.Process ID
-      description: Process ID
+      description: ID of the process
       type: string
     - contextPath: FireEyeHX.Search.Results.Local IP Address
       description: Local IP Address
@@ -2965,7 +3006,7 @@ script:
       description: Timestamp - Event
       type: string
     - contextPath: FireEyeHX.Search.Results.type
-      description: Type of the result
+      description: The type of the event
       type: string
     - contextPath: FireEyeHX.Search.Results.id
       description: ID of the result
