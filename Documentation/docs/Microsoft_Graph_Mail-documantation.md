@@ -115,7 +115,7 @@ List messages of the user.
 }
 ```
 ##### Human Readable Output
-![HRO - msg-list-messages](/Users/pekdz/Workspace/demisto/integration/documentation/msg-list-messages.png "msg-list-messages")
+![HRO - msg-list-messages](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-list-messages.png "msg-list-messages")
 
 ### msg-create-message
 ---
@@ -158,7 +158,7 @@ Create draft of a new message.
 ```
 ##### Human Readable Output
 
-![HRO - msg-create-message](/Users/pekdz/Workspace/demisto/integration/documentation/msg-create-message.png "msg-create-message")
+![HRO - msg-create-message](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-create-message.png "msg-create-message")
 
 ### msg-get-message
 ---
@@ -218,7 +218,7 @@ Retrieve detail information of a message.
 ```
 ##### Human Readable Output
 
-![HRO - msg-get-message](/Users/pekdz/Workspace/demisto/integration/documentation/msg-get-message.png "msg-get-message")
+![HRO - msg-get-message](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-get-message.png "msg-get-message")
 
 ### msg-list-drafts
 ---
@@ -271,7 +271,7 @@ List drafts of message of a user.
 ```
 ##### Human Readable Output
 
-![HRO - msg-list-drafts](/Users/pekdz/Workspace/demisto/integration/documentation/msg-list-drafts.png "msg-list-drafts")
+![HRO - msg-list-drafts](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-list-drafts.png "msg-list-drafts")
 
 ### msg-del-message
 ---
@@ -309,7 +309,7 @@ Delete a message.
 ```
 ##### Human Readable Output
 
-![HRO - msg-del-message](/Users/pekdz/Workspace/demisto/integration/documentation/msg-del-message.png "msg-del-message")
+![HRO - msg-del-message](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-del-message.png "msg-del-message")
 
 ### msg-send-message
 ---
@@ -347,7 +347,7 @@ Send a message in the draft folder.
 ```
 ##### Human Readable Output
 
-![HRO - msg-send-message](/Users/pekdz/Workspace/demisto/integration/documentation/msg-send-message.png "msg-send-message")
+![HRO - msg-send-message](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-send-message.png "msg-send-message")
 
 ### msg-move-message
 ---
@@ -389,7 +389,7 @@ Move a message to another folder.
 ```
 ##### Human Readable Output
 
-![HRO - msg-move-message](/Users/pekdz/Workspace/demisto/integration/documentation/msg-move-message.png "msg-move-message")
+![HRO - msg-move-message](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-move-message.png "msg-move-message")
 
 ### msg-forward-message
 ---
@@ -434,7 +434,7 @@ Forward a message.
 ```
 ##### Human Readable Output
 
-![HRO - msg-forward-message](/Users/pekdz/Workspace/demisto/integration/documentation/msg-forward-message.png "msg-forward-message")
+![HRO - msg-forward-message](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-forward-message.png "msg-forward-message")
 
 ### msg-list-folders
 ---
@@ -486,7 +486,7 @@ Get folders information for a mailbox. Only folders with read permissions will b
 ```
 ##### Human Readable Output
 
-![HRO - msg-list-folders](/Users/pekdz/Workspace/demisto/integration/documentation/msg-list-folders.png "msg-list-folders")
+![HRO - msg-list-folders](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-list-folders.png "msg-list-folders")
 
 ### msg-create-folder
 ---
@@ -526,7 +526,7 @@ Create a new mail folder in the root folder of the user's mailbox.
 ```
 ##### Human Readable Output
 
-![HRO - msg-create-folder](/Users/pekdz/Workspace/demisto/integration/documentation/msg-create-folder.png "msg-create-folder")
+![HRO - msg-create-folder](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-create-folder.png "msg-create-folder")
 
 ### msg-del-folder
 ---
@@ -566,7 +566,7 @@ Delete a folder.
 ```
 ##### Human Readable Output
 
-![HRO - msg-delete-folder](/Users/pekdz/Workspace/demisto/integration/documentation/msg-del-folder.png "msg-del-folder")
+![HRO - msg-delete-folder](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-del-folder.png "msg-del-folder")
 
 ### msg-get-attachments
 ---
@@ -629,7 +629,7 @@ Get attachements of a message. If you don't provide attachment id, all the attac
 ```
 ##### Human Readable Output
 
-![HRO - msg-get-attachments](/Users/pekdz/Workspace/demisto/integration/documentation/msg-get-attachments.png "msg-get-attachments")
+![HRO - msg-get-attachments](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-get-attachments.png "msg-get-attachments")
 
 ### msg-del-attachment
 ---
@@ -672,7 +672,7 @@ Delete an attachment on a message.
 ```
 ##### Human Readable Output
 
-![HRO - msg-del-attachment](/Users/pekdz/Workspace/demisto/integration/documentation/msg-del-attachment.png "msg-del-attachment")
+![HRO - msg-del-attachment](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-del-attachment.png "msg-del-attachment")
 
 ### msg-list-rules
 ---

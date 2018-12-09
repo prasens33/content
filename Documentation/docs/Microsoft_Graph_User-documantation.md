@@ -79,7 +79,7 @@ N/A
 
 ##### Human Readable Output
 
-![HRO - msg-get-users](/Users/pekdz/Workspace/demisto/integration/documentation/msg-get-users.png "msg-get-users")
+![HRO - msg-get-users](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-get-users.png "msg-get-users")
 
 ### msg-get-user
 ---
@@ -124,7 +124,7 @@ Retrieve detailed information of a user.
 
 ##### Human Readable Output
 
-![HRO - msg-get-user](/Users/pekdz/Workspace/demisto/integration/documentation/msg-get-user.png "msg-get-user")
+![HRO - msg-get-user](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-get-user.png "msg-get-user")
 
 ### msg-create-user
 ---
@@ -168,7 +168,7 @@ Create a new user.
 
 ##### Human Readable Output
 
-![HRO - msg-create-user](/Users/pekdz/Workspace/demisto/integration/documentation/msg-create-user.png "msg-create-user")
+![HRO - msg-create-user](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-create-user.png "msg-create-user")
 
 ### msg-delete-user
 ---
@@ -205,7 +205,7 @@ Delete an existing user.
 
 ##### Human Readable Output
 
-![HRO - msg-delete-user](/Users/pekdz/Workspace/demisto/integration/documentation/msg-delete-user.png "msg-delete-user")
+![HRO - msg-delete-user](https://raw.githubusercontent.com/Pekdz/content/joe_doc/Documentation/docs/hrd/msg-delete-user.png "msg-delete-user")
 
 ### msg-update-user
 ---
